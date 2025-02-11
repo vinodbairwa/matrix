@@ -1,0 +1,250 @@
+
+
+
+
+
+
+/* Reset styling for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#pricing {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#pricing:hover {
+    background-color: #0056b3;
+}
+
+/* Button container styling */
+#buttonContainer {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#buttonContainer button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#buttonContainer button:hover {
+    background-color: #218838;
+}
+
+/* Feature Products Section */
+/* .FeaturePrducts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    display: block;
+    margin-top: 20px;
+} */
+.FeaturePrducts {
+    display: block;
+    width: 20%; /* Reduce width by 20% */
+    margin: 0 auto; /* Center it horizontally */
+    margin-left: 10px;
+  
+}
+
+
+.FeaturePrducts .d1, .FeaturePrducts .d2, .FeaturePrducts .d3, .FeaturePrducts .d4 {
+    background-color: #e4dbdb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.FeaturePrducts .d1:hover, .FeaturePrducts .d2:hover, .FeaturePrducts .d3:hover, .FeaturePrducts .d4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Name and Price Styling */
+.category_name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Disabled state for divs */
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: #0f0d0d;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .FeaturePrducts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .FeaturePrducts {
+        grid-template-columns: 1fr;
+    }
+    
+    #buttonContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #buttonContainer button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .FeaturePrducts {
+        padding: 0;
+    }
+    
+    #buttonContainer button {
+        padding: 10px 20px;
+    }
+}
+
+
+.FeaturePrducts .d1, 
+.FeaturePrducts .d2, 
+.FeaturePrducts .d3, 
+.FeaturePrducts .d4 {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.feature-button {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    /* color: white; */
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+.category_name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+/* .StandardizedPlans{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 2px solid red;
+    padding-right: 50px;
+    margin: 0px 331px 357px 10px;
+    width: 60%;
+} */
+
+/* .s1{
+    display: flex;
+    align-items: center;
+} */
+
+.StandardizedPlans {
+    display: flex; /* Makes the child divs appear in a row by default */
+    /* flex-wrap: wrap; /* Allows the child divs to wrap to the next line if there's not enough space */
+    gap: 10px; /* Adds space between the child divs */
+    justify-content: space-between; /* Aligns the child divs with space between them */
+    padding: 10px; 
+   
+    margin: 0px 785px 130px 10px;
+}
+
+.StandardizedPlans > div {
+    flex: 1 1 22%; /* Makes each div take up 22% of the container width, with flexibility */
+    min-width: 200px; /* Ensures that each div doesn't shrink smaller than 200px */
+    background-color: #f0f0f0; /* Optional: Adds a background color to the child divs */
+    padding: 20px; /* Adds padding inside each div */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+}
+
+.s1, .s2, .s3, .s4 {
+    display: flex; /* Allows you to use flex on individual divs */
+    flex-direction: row; /* Organizes the content vertically */
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Centers the content horizontally */
+}
+
+
+
+.FavouriteOne{
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+    padding-right: 50px;
+    margin: 0px 331px 357px 10px;
+    width: 30%;
+    height: 40%;
+}
