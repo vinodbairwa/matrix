@@ -129,6 +129,7 @@ async function fetchAndDisplayData(category) {
     document.getElementById(id).addEventListener("click", async function () {
         await fetchAndDisplayData(`Matrix ${id.toUpperCase()}`);
         document.querySelector(".FeaturePrducts").style.display = "block";
+      
     });
 });
 
@@ -198,7 +199,9 @@ async function fetchAndDisplay(category_id) {
 
         // Show the StandardizedPlans div once data is inserted
         document.querySelector(".StandardizedPlans").style.display = "block";
-        document.querySelector(".FeaturePrducts").style.display = "none"; // Hide FeaturePrducts div
+        // document.querySelector(".FeaturePrducts").style.display = "none"; // Hide FeaturePrducts div
+        // document.querySelector(".FavouriteOne").style.display = "block";
+        
 
         // Add event listener to each button to display data in FavouriteOne div
         document.querySelectorAll(".feature-sub-button").forEach(button => {
@@ -275,6 +278,7 @@ async function fetchSubDataDisplay(product_id) {
         if (cleanedData.length === 0) {
             divs.forEach(div => div.classList.add("disabled"));
         }
+        document.querySelector(".FavouriteOne").style.display = "block";
       
       
  

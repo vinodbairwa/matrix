@@ -238,13 +238,13 @@ nav {
 
 
 .FavouriteOne{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
    
-    padding-right: 50px;
-    margin: 0px 331px 357px 10px;
+    padding: 8px 285px 33px 8px;
+    margin: -156px 195px 0px 794px;
     width: 30%;
     height: 40%;
 }
